@@ -6,8 +6,8 @@ set -e
 start_time=$SECONDS
 
 echo "=== 1. 시스템 패키지 설치 ==="
-sudo apt update
-sudo apt install -y \
+  apt update
+  apt install -y \
   build-essential \
   zlib1g-dev \
   libncurses5-dev \
@@ -33,7 +33,7 @@ tar -xf Python-3.12.4.tar.xz
 cd Python-3.12.4
 
 ./configure --enable-optimizations
-sudo make -j"$(nproc)" altinstall
+make -j"$(nproc)" altinstall
 
 cd /tmp
 rm -rf /tmp/Python-3.12.4 /tmp/Python-3.12.4.tar.xz
